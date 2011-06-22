@@ -1,0 +1,43 @@
+# Get WordPress: 
+# $ wp get <version> [<rename-folder-to>]
+
+wp get latest 
+wp get 3.1.3
+wp get 3.2-rc1
+
+# Get a WordPress Plugin: 
+# $ wp get plugin <plugin-slug> [<version>]
+
+wp get plugin twitter-friendly-links
+wp get plugin wordpress-seo
+wp get plugin wordpress-seo 5.1
+
+# Get a WordPress Theme:
+# $ wp get theme <theme-slug> [<version>]
+
+wp get theme twentyten
+wp get theme minimal-georgia
+wp get theme minimal-georgia 1.4
+
+# Create a WordPress Plugin:
+# $ wp new plugin <plugin-slug>
+
+wp new plugin my-new-plugin
+wp new plugin foo-bar
+
+# Create a WordPress Theme:
+# $ wp new theme <theme-slug>
+
+wp new theme my-new-theme
+wp new theme foo-bar
+
+# Launch a MySQL shell
+# $ wp mysql
+
+# Backups
+# $ wp backup [<sql|full>] <directory>
+
+# Updates
+# $ wp update [<version>]
+# $ wp update plugin <plugin-slug> [<version>]
+# $ wp update theme <theme-slug> [<version>]

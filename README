@@ -1,43 +1,34 @@
-# Get WordPress: 
-# $ wp get <version> [<rename-folder-to>]
+WordPress CLI (Command Line Interface)
 
-wp get latest 
-wp get 3.1.3
-wp get 3.2-rc1
+== Install ==
 
-# Get a WordPress Plugin: 
-# $ wp get plugin <plugin-slug> [<version>]
+Will write this soon
 
-wp get plugin twitter-friendly-links
-wp get plugin wordpress-seo
-wp get plugin wordpress-seo 5.1
+== Commands ==
 
-# Get a WordPress Theme:
-# $ wp get theme <theme-slug> [<version>]
+Download and extract WordPress:
 
-wp get theme twentyten
-wp get theme minimal-georgia
-wp get theme minimal-georgia 1.4
+$ wp get core [<version>] [--dir-name=<directory_name>]
 
-# Create a WordPress Plugin:
-# $ wp new plugin <plugin-slug>
+wp get core # get the latest version of WordPress
+wp get core 3.1 # get WordPress v 3.1
+wp get core 3.2-rc1 # get WordPress v 3.2 Release Candidate 1
+wp get core --dir-name=application # get the latest version, but extract it to /application/ instead of /wordpress/
 
-wp new plugin my-new-plugin
-wp new plugin foo-bar
+Download and extract a WordPress plugin:
 
-# Create a WordPress Theme:
-# $ wp new theme <theme-slug>
+$ wp get plugin <plugin_name> [<plugin_version>]
 
-wp new theme my-new-theme
-wp new theme foo-bar
+wp get plugin wordpress-seo # get the latest WordPress SEO by Yoast plugin
+wp get plugin wordpress-seo 0.4.1 # get the WordPress SEO plugin version 0.4.1
 
-# Launch a MySQL shell
-# $ wp mysql
+Note: if the plugin was previously installed it will be removed before the new one is extracted.
 
-# Backups
-# $ wp backup [<sql|full>] <directory>
+== Future Work ==
 
-# Updates
-# $ wp update [<version>]
-# $ wp update plugin <plugin-slug> [<version>]
-# $ wp update theme <theme-slug> [<version>]
+$ wp get theme <theme_name> [<version>]
+$ wp create plugin <plugin_name>
+$ wp create theme <theme_name> [--parent=<parent_theme_name>]
+
+$ wp mysql
+$ wp backup [<sql|full>] <directory>
